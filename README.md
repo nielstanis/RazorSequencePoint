@@ -10,7 +10,7 @@ The XSS can be found here: [Index.cshtml](src/Pages/Index.cshtml#L8) at line num
 
 ## 8.0.203
 
-We see in the generated Razor View for `Index.cshtml` in `8.0.203` part of `app.dll`:
+In the generated Razor View for `Index.cshtml` in `8.0.203` part of `app.dll` we find:
 
 ```csharp
 #line default
@@ -31,6 +31,8 @@ Write(Html.Raw(this.Model.DataFromQ));
 Inside of `MethodDebugInformation` we can find entry `31000076` that is pointing out to `Index.cshtml` and has `SP(IL_0034 17:8,36-8,67)` the location of the `@Html.Raw`. 
 
 ## 8.0.302
+
+In the generated Razor View for `Index.cshtml` in `8.0.302` part of `app.dll` we find:
 
 ```csharp
 #line default
